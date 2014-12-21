@@ -1,26 +1,35 @@
-Summary:	PolicyKit helper to configure cups with fine-grained privileges
+Summary:	PolicyKit helper to configure CUPS with fine-grained privileges
+Summary(pl.UTF-8):	Program pomocniczy PolicyKit do konfiguracji CUPS-a z właściwymi uprawnieniami
 Name:		cups-pk-helper
-Version:	0.2.1
+Version:	0.2.5
 Release:	1
-License:	GPL v2
-Group:		Applications
-Source0:	http://www.freedesktop.org/software/cups-pk-helper/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	26dc2db9566804930a7f1dad37ac4a78
-BuildRequires:	autoconf
-BuildRequires:	automake >= 1:1.9
+License:	GPL v2+
+Group:		Applications/System
+Source0:	http://www.freedesktop.org/software/cups-pk-helper/releases/%{name}-%{version}.tar.xz
+# Source0-md5:	f14fb79da9c85f71e3e29101e179f2fc
+BuildRequires:	autoconf >= 2.50
+BuildRequires:	automake >= 1:1.11
 BuildRequires:	cups-devel
+BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.30.0
 BuildRequires:	gnome-common
 BuildRequires:	intltool >= 0.40.6
 BuildRequires:	pkgconfig
 BuildRequires:	polkit-devel >= 0.97
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Requires:	dbus
 Requires:	glib2 >= 1:2.30.0
+Requires:	polkit >= 0.97
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 cups-pk-helper is an application which makes cups configuration
 interfaces available under control of PolicyKit.
+
+%description -l pl.UTF-8
+cups-pk-helper to aplikacja udostępniająca interfejsy konfiguracyjne
+CUPS-a pod kontrolą usługi PolicyKit.
 
 %prep
 %setup -q
