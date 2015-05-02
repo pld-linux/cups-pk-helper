@@ -2,7 +2,7 @@ Summary:	PolicyKit helper to configure CUPS with fine-grained privileges
 Summary(pl.UTF-8):	Program pomocniczy PolicyKit do konfiguracji CUPS-a z właściwymi uprawnieniami
 Name:		cups-pk-helper
 Version:	0.2.5
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/System
 Source0:	http://www.freedesktop.org/software/cups-pk-helper/releases/%{name}-%{version}.tar.xz
